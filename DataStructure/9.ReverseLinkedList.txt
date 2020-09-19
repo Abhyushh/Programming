@@ -1,0 +1,15 @@
+void reverse()
+{
+    struct ll *next, *previous, *current;
+    current = head;
+    previous = NULL;
+    while(current != NULL)
+    {
+        next = current->next;
+        current->next = previous;
+        previous = current;
+        current = next;
+    }
+    head = previous;
+}
+
